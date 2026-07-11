@@ -7,6 +7,9 @@
   "redirects": [
     { "source": "/", "destination": "/en", "permanent": true }
   ],
+  "rewrites": [
+    { "source": "/assets/brand/labware-social-card.png", "destination": "/api/social-card" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
