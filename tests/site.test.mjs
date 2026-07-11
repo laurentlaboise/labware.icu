@@ -71,14 +71,18 @@ test("six authoritative legal drafts are linked and visibly non-effective", () =
   assert.match(lao, /ຍັງບໍ່ມີຜົນບັງຄັບໃຊ້/);
 });
 
-test("brand assets are complete and local", async () => {
+test("brand assets are complete and the social card stays first-party", async () => {
   const assets = await readdir(new URL("../public/assets/brand", import.meta.url));
-  for (const file of ["labware-mark.svg", "labware-wordmark.svg", "labware-lockup-dark.svg", "labware-lockup-light.svg", "labware-agent-badge.svg", "labware-social-card.png"]) {
+  for (const file of ["labware-mark.svg", "labware-wordmark.svg", "labware-lockup-dark.svg", "labware-lockup-light.svg", "labware-agent-badge.svg"]) {
     assert.ok(assets.includes(file), "missing brand asset: " + file);
   }
-  const socialCard = await readFile(new URL("../public/assets/brand/labware-social-card.png", import.meta.url));
+  const socialFunction = await read("api/social-card.js");
+  const socialCardBase64 = [...socialFunction.matchAll(/^\s+"([A-Za-z0-9+/=]+)",$/gm)].map((match) => match[1]).join("");
+  const socialCard = Buffer.from(socialCardBase64, "base64");
   assert.equal(socialCard.readUInt32BE(16), 1200);
   assert.equal(socialCard.readUInt32BE(20), 630);
+  assert.match(socialFunction, /"Content-Type": "image\/png"/);
+  assert.match(vercel, /"source": "\/assets\/brand\/labware-social-card\.png", "destination": "\/api\/social-card"/);
   for (const page of [english, lao]) {
     assert.match(page, /og:image" content="https:\/\/www\.labware\.icu\/assets\/brand\/labware-social-card\.png"/);
     assert.match(page, /og:image:width" content="1200"/);
