@@ -1,0 +1,17 @@
+{
+  "name": "Labware Tower",
+  "short_name": "Labware",
+  "description": "A living company of AI colleagues under human direction.",
+  "start_url": "/en",
+  "display": "standalone",
+  "background_color": "#ece0c8",
+  "theme_color": "#171c4b",
+  "icons": [
+    {
+      "src": "/assets/brand/labware-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
