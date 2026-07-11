@@ -3,10 +3,13 @@ document.documentElement.classList.remove("js-disabled");
 const header = document.querySelector("[data-header]");
 const menuButton = document.querySelector("[data-menu-button]");
 const menu = document.querySelector("[data-menu]");
+const menuViewport = window.matchMedia("(max-width: 1080px)");
 
-const setMenu = (open) => {
+const setMenu = (requestedOpen) => {
   if (!menuButton || !menu) return;
+  const open = Boolean(requestedOpen && menuViewport.matches);
   menuButton.setAttribute("aria-expanded", String(open));
+  menuButton.setAttribute("aria-label", open ? menuButton.dataset.closeLabel : menuButton.dataset.openLabel);
   menu.classList.toggle("is-open", open);
   document.body.classList.toggle("menu-open", open);
 };
@@ -20,8 +23,26 @@ menu?.addEventListener("click", (event) => {
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") setMenu(false);
+  if (event.key !== "Escape" || menuButton?.getAttribute("aria-expanded") !== "true") return;
+  setMenu(false);
+  menuButton.focus();
 });
+
+const resetMenuForViewport = (event) => {
+  if (!event.matches) setMenu(false);
+};
+
+if (menuViewport.addEventListener) menuViewport.addEventListener("change", resetMenuForViewport);
+else menuViewport.addListener(resetMenuForViewport);
+window.addEventListener("resize", () => {
+  if (!menuViewport.matches) setMenu(false);
+}, { passive: true });
+if ("ResizeObserver" in window) {
+  const viewportObserver = new ResizeObserver(() => {
+    if (!menuViewport.matches) setMenu(false);
+  });
+  viewportObserver.observe(document.documentElement);
+}
 
 const updateHeader = () => header?.classList.toggle("is-scrolled", window.scrollY > 12);
 updateHeader();
