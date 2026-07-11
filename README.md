@@ -39,7 +39,7 @@ Open `http://127.0.0.1:4173/en` or `/lo`.
 4. Set Framework Preset to `Other`, Build Command to `npm run build`, and Output Directory to `dist` if Vercel does not read `vercel.json` automatically.
 5. Verify the preview build, security headers, responsive layouts, locale routes, legal links, and CTAs.
 6. Merge after review.
-7. Add `labware.icu` and `www.labware.icu` to the landing Vercel project. Redirect `www` to the apex.
+7. Add `labware.icu` and `www.labware.icu` to the landing Vercel project. Keep `www.labware.icu` as the primary production host and permanently redirect the apex to `www` so it matches canonical, Open Graph, robots, and sitemap URLs.
 8. Follow Vercel’s displayed DNS records at the domain provider. Do not alter the existing `app.labware.icu` record.
 9. Confirm HTTPS, root redirect to `/en`, `/lo`, login/demo/legal links, and the app subdomain.
 10. Roll back by promoting the preceding successful Vercel deployment or restoring the previous apex DNS record.

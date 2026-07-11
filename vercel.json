@@ -5,7 +5,10 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/", "destination": "/en", "permanent": false }
+    { "source": "/", "destination": "/en", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/assets/brand/labware-social-card.png", "destination": "/api/social-card" }
   ],
   "headers": [
     {
@@ -24,7 +27,7 @@
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
     }
   ]

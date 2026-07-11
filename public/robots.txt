@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://labware.icu/sitemap.xml
+Sitemap: https://www.labware.icu/sitemap.xml

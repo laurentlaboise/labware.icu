@@ -3,3 +3,4 @@ dist/
 .vercel/
 node_modules/
 *.log
+/public/assets/brand/labware-social-card.png
