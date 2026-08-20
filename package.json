@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "test": "node --test tests/*.test.mjs",
+    "roster": "node scripts/sync-roster.mjs",
     "build": "node scripts/build.mjs",
-    "check": "npm test && npm run build",
+    "check": "npm run roster && npm test && npm run build",
     "dev": "node scripts/serve.mjs public 4173",
     "preview": "node scripts/serve.mjs dist 4173"
   },

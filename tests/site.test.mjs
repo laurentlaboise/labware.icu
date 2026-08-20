@@ -3,15 +3,23 @@ import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 
 const read = (path) => readFile(new URL("../" + path, import.meta.url), "utf8");
-const [english, lao, css, js, vercel, sitemap, robots] = await Promise.all([
+const [english, lao, css, js, vercel, sitemap, robots, registrySource] = await Promise.all([
   read("public/en/index.html"),
   read("public/lo/index.html"),
   read("public/assets/site.css"),
   read("public/assets/site.js"),
   read("vercel.json"),
   read("public/sitemap.xml"),
-  read("public/robots.txt")
+  read("public/robots.txt"),
+  read("data/agents-registry.json")
 ]);
+const registry = JSON.parse(registrySource);
+
+const rosterBlock = (page) => {
+  const match = page.match(/<!-- roster:start -->([\s\S]*?)<!-- roster:end -->/);
+  assert.ok(match, "missing generated roster markers");
+  return match[1];
+};
 
 test("ships complete English and Lao locale routes", () => {
   assert.match(english, /<html lang="en"/);
@@ -24,8 +32,8 @@ test("ships complete English and Lao locale routes", () => {
     assert.equal((page.match(/<h1\b/g) || []).length, 1);
     assert.match(page, /class="skip-link"/);
     assert.match(page, /prefers-reduced-motion|site\.css/);
-    assert.match(page, /site\.css\?v=20260712b/);
-    assert.match(page, /site\.js\?v=20260712b/);
+    assert.match(page, /site\.css\?v=20260820a/);
+    assert.match(page, /site\.js\?v=20260820a/);
   }
   assert.match(lao, /ສະບັບພາສາລາວແບບທົດລອງ/);
 });
@@ -129,6 +137,44 @@ test("responsive, motion, sitemap, and robots contracts are present", () => {
   assert.doesNotMatch(english + lao + sitemap + robots, /https:\/\/labware\.icu/);
   assert.match(vercel, /"source": "\/", "destination": "\/en", "permanent": true/);
   assert.doesNotMatch(vercel, /immutable/);
+});
+
+test("homepage roster matches the public 68-agent registry and 64 sold seats", () => {
+  assert.equal(registry.totalAgents, 68);
+  assert.equal(registry.soldColleagueSeats, 64);
+  assert.equal(registry.departments, 13);
+  assert.equal(registry.departmentGroups, 15);
+  assert.equal(registry.hubAgentName, "Alex");
+  assert.equal(registry.agents.length, 68);
+  assert.equal(registry.departmentSummary.length, 15);
+  assert.equal(new Set(registry.agents.map((agent) => agent.name)).size, 68);
+  assert.match(registry.source, /laurentlaboise\/ai-team\/blob\/main\/data\/agents-registry\.json/);
+
+  for (const page of [english, lao]) {
+    const roster = rosterBlock(page);
+    const names = [...roster.matchAll(/<strong lang="en">([^<]+)<\/strong>/g)].map((match) => match[1]);
+    assert.deepEqual(names.slice().sort(), registry.agents.map((agent) => agent.name).slice().sort());
+    assert.equal(names.length, 68);
+    const decode = (value) => value.replaceAll("&amp;", "&").replaceAll("&lt;", "<").replaceAll("&gt;", ">").replaceAll("&quot;", '"');
+    const decodedRoster = decode(roster);
+    for (const department of registry.departmentSummary) {
+      assert.ok(decodedRoster.includes(department.name), "missing department: " + department.name);
+      assert.ok(roster.includes(`id="${department.id}"`), "missing department id: " + department.id);
+    }
+    for (const agent of registry.agents) {
+      assert.ok(decodedRoster.includes(agent.role), "missing role: " + agent.role);
+    }
+    assert.match(page, /64 of 68|64 \/ 68|64 of these 68|64 \/68|64\/68/);
+    assert.match(page, /Alex/);
+    assert.match(page, /13\+/);
+    assert.match(page, /id="roster"/);
+    assert.doesNotMatch(roster, /Brand lead|Lao localizer|Content lead|Marketing|Executive/);
+  }
+
+  assert.match(english, /routed through Alex/);
+  assert.match(english, /public agent registry|public registry/);
+  assert.match(english, /Alex is the hub/);
+  assert.match(english, /hub-mark">Hub/);
 });
 
 test("Lao beta discloses localization limits and preserves pricing parity", () => {

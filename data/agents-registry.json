@@ -1,0 +1,580 @@
+{
+  "source": "https://github.com/laurentlaboise/ai-team/blob/main/data/agents-registry.json",
+  "version": "2.0.0",
+  "lastUpdated": "2026-01-03",
+  "totalAgents": 68,
+  "soldColleagueSeats": 64,
+  "departments": 13,
+  "departmentGroups": 15,
+  "hubAgentName": "Alex",
+  "agents": [
+    {
+      "id": "agent-001",
+      "name": "Alex",
+      "department": "Central Command & Governance",
+      "departmentId": "dept-01",
+      "role": "Strategic Mirror & Hub"
+    },
+    {
+      "id": "agent-002",
+      "name": "Orion",
+      "department": "Central Command & Governance",
+      "departmentId": "dept-01",
+      "role": "Ops/Project Management"
+    },
+    {
+      "id": "agent-003",
+      "name": "Hadex",
+      "department": "Central Command & Governance",
+      "departmentId": "dept-01",
+      "role": "Systemic Harmony/Meta"
+    },
+    {
+      "id": "agent-004",
+      "name": "Aegis",
+      "department": "Central Command & Governance",
+      "departmentId": "dept-01",
+      "role": "Ethics Guardian"
+    },
+    {
+      "id": "agent-005",
+      "name": "Librarian",
+      "department": "Central Command & Governance",
+      "departmentId": "dept-01",
+      "role": "Knowledge Distiller"
+    },
+    {
+      "id": "agent-006",
+      "name": "Healer",
+      "department": "Healing & Somatic Operations",
+      "departmentId": "dept-02",
+      "role": "Ritual/Breathwork Suggestion"
+    },
+    {
+      "id": "agent-007",
+      "name": "Shadow Work",
+      "department": "Healing & Somatic Operations",
+      "departmentId": "dept-02",
+      "role": "Pattern Detection"
+    },
+    {
+      "id": "agent-008",
+      "name": "Nervous System",
+      "department": "Healing & Somatic Operations",
+      "departmentId": "dept-02",
+      "role": "Somatic Leveling"
+    },
+    {
+      "id": "agent-009",
+      "name": "Lao Market Liaison",
+      "department": "Healing & Somatic Operations",
+      "departmentId": "dept-02",
+      "role": "Cultural Nuance Auditor"
+    },
+    {
+      "id": "agent-010",
+      "name": "Creator",
+      "department": "Creative & Aesthetic",
+      "departmentId": "dept-03",
+      "role": "Ideation & Poetry"
+    },
+    {
+      "id": "agent-011",
+      "name": "Visual",
+      "department": "Creative & Aesthetic",
+      "departmentId": "dept-03",
+      "role": "Image-Gen Orchestration"
+    },
+    {
+      "id": "agent-012",
+      "name": "Sound",
+      "department": "Creative & Aesthetic",
+      "departmentId": "dept-03",
+      "role": "Audio/Binaural Design"
+    },
+    {
+      "id": "agent-013",
+      "name": "Messenger",
+      "department": "Messaging & Voice",
+      "departmentId": "dept-04",
+      "role": "Omnichannel Posting"
+    },
+    {
+      "id": "agent-014",
+      "name": "Tone Calibration",
+      "department": "Messaging & Voice",
+      "departmentId": "dept-04",
+      "role": "Voice Alignment"
+    },
+    {
+      "id": "agent-015",
+      "name": "Timing",
+      "department": "Messaging & Voice",
+      "departmentId": "dept-04",
+      "role": "Lunar/Algorithm Sync"
+    },
+    {
+      "id": "agent-016",
+      "name": "Sales Director",
+      "department": "Sales & Revenue",
+      "departmentId": "dept-05",
+      "role": "Funnel Orchestration"
+    },
+    {
+      "id": "agent-017",
+      "name": "Lead Discovery",
+      "department": "Sales & Revenue",
+      "departmentId": "dept-05",
+      "role": "Prospect Identification"
+    },
+    {
+      "id": "agent-018",
+      "name": "Lead Nurturing",
+      "department": "Sales & Revenue",
+      "departmentId": "dept-05",
+      "role": "Relationship Warming"
+    },
+    {
+      "id": "agent-019",
+      "name": "Sales Closer",
+      "department": "Sales & Revenue",
+      "departmentId": "dept-05",
+      "role": "Offer Finalization"
+    },
+    {
+      "id": "agent-020",
+      "name": "Proposal Gen",
+      "department": "Sales & Revenue",
+      "departmentId": "dept-05",
+      "role": "Document Architect"
+    },
+    {
+      "id": "agent-021",
+      "name": "Client Relator",
+      "department": "Sales & Revenue",
+      "departmentId": "dept-05",
+      "role": "Gratitude/Retention"
+    },
+    {
+      "id": "agent-022",
+      "name": "Sales Tracker",
+      "department": "Sales & Revenue",
+      "departmentId": "dept-05",
+      "role": "CRM Automation"
+    },
+    {
+      "id": "agent-023",
+      "name": "Offer Optimizer",
+      "department": "Sales & Revenue",
+      "departmentId": "dept-05",
+      "role": "A/B Testing Offers"
+    },
+    {
+      "id": "agent-024",
+      "name": "Architect",
+      "department": "Strategy & Market Intelligence",
+      "departmentId": "dept-06",
+      "role": "Ecosystem Mapping"
+    },
+    {
+      "id": "agent-025",
+      "name": "KPI Sentinel",
+      "department": "Strategy & Market Intelligence",
+      "departmentId": "dept-06",
+      "role": "Metric Monitoring"
+    },
+    {
+      "id": "agent-026",
+      "name": "Market Scanner",
+      "department": "Strategy & Market Intelligence",
+      "departmentId": "dept-06",
+      "role": "Research & Competitive Intel"
+    },
+    {
+      "id": "agent-027",
+      "name": "Finance",
+      "department": "Financial Operations",
+      "departmentId": "dept-07",
+      "role": "P&L Oversight"
+    },
+    {
+      "id": "agent-028",
+      "name": "Pricing",
+      "department": "Financial Operations",
+      "departmentId": "dept-07",
+      "role": "Dynamic Value Testing"
+    },
+    {
+      "id": "agent-029",
+      "name": "Passive Income",
+      "department": "Financial Operations",
+      "departmentId": "dept-07",
+      "role": "Pipeline Monitoring"
+    },
+    {
+      "id": "agent-030",
+      "name": "Sync Decoder",
+      "department": "Spiritual Operations",
+      "departmentId": "dept-08",
+      "role": "Symbol Interpretation"
+    },
+    {
+      "id": "agent-031",
+      "name": "Ritual Gen",
+      "department": "Spiritual Operations",
+      "departmentId": "dept-08",
+      "role": "Cycle Alignment"
+    },
+    {
+      "id": "agent-032",
+      "name": "DM Anchor",
+      "department": "Spiritual Operations",
+      "departmentId": "dept-08",
+      "role": "Clarity/Protection"
+    },
+    {
+      "id": "agent-033",
+      "name": "Inner Oracle",
+      "department": "Spiritual Operations",
+      "departmentId": "dept-08",
+      "role": "Intuition Priming"
+    },
+    {
+      "id": "agent-034",
+      "name": "Make.com",
+      "department": "Automation & Integration",
+      "departmentId": "dept-09",
+      "role": "Scenario Builder"
+    },
+    {
+      "id": "agent-035",
+      "name": "n8n",
+      "department": "Automation & Integration",
+      "departmentId": "dept-09",
+      "role": "Complex Logic Engine"
+    },
+    {
+      "id": "agent-036",
+      "name": "Integrator",
+      "department": "Automation & Integration",
+      "departmentId": "dept-09",
+      "role": "Tool Synchronization"
+    },
+    {
+      "id": "agent-037",
+      "name": "SEO Optimizer",
+      "department": "Content & SEO",
+      "departmentId": "dept-10",
+      "role": "Ranking Enhancement"
+    },
+    {
+      "id": "agent-038",
+      "name": "Blog Gen",
+      "department": "Content & SEO",
+      "departmentId": "dept-10",
+      "role": "Narrative Expansion"
+    },
+    {
+      "id": "agent-039",
+      "name": "Caption/Tag",
+      "department": "Content & SEO",
+      "departmentId": "dept-10",
+      "role": "Engagement Hooks"
+    },
+    {
+      "id": "agent-040",
+      "name": "App Gen",
+      "department": "Product Design & UX",
+      "departmentId": "dept-11",
+      "role": "Feature Architecting"
+    },
+    {
+      "id": "agent-041",
+      "name": "Dashboard",
+      "department": "Product Design & UX",
+      "departmentId": "dept-11",
+      "role": "Data Visualization"
+    },
+    {
+      "id": "agent-042",
+      "name": "User Flow",
+      "department": "Product Design & UX",
+      "departmentId": "dept-11",
+      "role": "Onboarding Logic"
+    },
+    {
+      "id": "agent-043",
+      "name": "Protector",
+      "department": "Legal, Ethics & Governance",
+      "departmentId": "dept-12",
+      "role": "Contract/NDA Drafting"
+    },
+    {
+      "id": "agent-044",
+      "name": "Compliance",
+      "department": "Legal, Ethics & Governance",
+      "departmentId": "dept-12",
+      "role": "Policy Adherence"
+    },
+    {
+      "id": "agent-045",
+      "name": "Privacy",
+      "department": "Legal, Ethics & Governance",
+      "departmentId": "dept-12",
+      "role": "GDPR/CCPA Oversight"
+    },
+    {
+      "id": "agent-046",
+      "name": "Audit Trail",
+      "department": "Legal, Ethics & Governance",
+      "departmentId": "dept-12",
+      "role": "Provenance Logging"
+    },
+    {
+      "id": "agent-047",
+      "name": "Web Scanner",
+      "department": "Web & Outreach",
+      "departmentId": "dept-13",
+      "role": "HTML/Cache Retrieval"
+    },
+    {
+      "id": "agent-048",
+      "name": "Outreach",
+      "department": "Web & Outreach",
+      "departmentId": "dept-13",
+      "role": "Partner Identification"
+    },
+    {
+      "id": "agent-049",
+      "name": "SEO Auditor",
+      "department": "Web & Outreach",
+      "departmentId": "dept-13",
+      "role": "Technical Health"
+    },
+    {
+      "id": "agent-050",
+      "name": "Kundalini Tracker",
+      "department": "Specialized Threads",
+      "departmentId": "dept-14-threads",
+      "role": "Energy Symptom Timeline Mapping"
+    },
+    {
+      "id": "agent-051",
+      "name": "Twin Flame Portal",
+      "department": "Specialized Threads",
+      "departmentId": "dept-14-threads",
+      "role": "Polarity Shift Growth Metrics"
+    },
+    {
+      "id": "agent-052",
+      "name": "Trauma Decoder",
+      "department": "Specialized Threads",
+      "departmentId": "dept-14-threads",
+      "role": "Emotional Loop Root Cause Analysis"
+    },
+    {
+      "id": "agent-053",
+      "name": "Sync Agent",
+      "department": "Specialized Threads",
+      "departmentId": "dept-14-threads",
+      "role": "Number Pattern Symbolic Meanings"
+    },
+    {
+      "id": "agent-054",
+      "name": "Identity Evolver",
+      "department": "Specialized Threads",
+      "departmentId": "dept-14-threads",
+      "role": "Belief Shift Mapping"
+    },
+    {
+      "id": "agent-055",
+      "name": "API Synchronizer",
+      "department": "Technical Expansion",
+      "departmentId": "dept-15-expansion",
+      "role": "Real-time API Manager"
+    },
+    {
+      "id": "agent-056",
+      "name": "Sustainability Metric",
+      "department": "Technical Expansion",
+      "departmentId": "dept-15-expansion",
+      "role": "ESG & Impact Auditor"
+    },
+    {
+      "id": "agent-057",
+      "name": "UX Auditor",
+      "department": "Technical Expansion",
+      "departmentId": "dept-15-expansion",
+      "role": "Human-Agent Interaction Tester"
+    },
+    {
+      "id": "agent-058",
+      "name": "Knowledge Distiller",
+      "department": "Technical Expansion",
+      "departmentId": "dept-15-expansion",
+      "role": "Cross-department Synthesis"
+    },
+    {
+      "id": "agent-059",
+      "name": "Adversarial Security",
+      "department": "Technical Expansion",
+      "departmentId": "dept-15-expansion",
+      "role": "Threat Simulation (Red Team)"
+    },
+    {
+      "id": "agent-060",
+      "name": "Quantum Strategist",
+      "department": "Technical Expansion",
+      "departmentId": "dept-15-expansion",
+      "role": "Probability Mapping"
+    },
+    {
+      "id": "agent-061",
+      "name": "Soul-Tech Aligner",
+      "department": "Technical Expansion",
+      "departmentId": "dept-15-expansion",
+      "role": "Resonance Checker"
+    },
+    {
+      "id": "agent-062",
+      "name": "Lao Language Expert",
+      "department": "Technical Expansion",
+      "departmentId": "dept-15-expansion",
+      "role": "Translation/Tone Localization"
+    },
+    {
+      "id": "agent-063",
+      "name": "Mobile Native",
+      "department": "Technical Expansion",
+      "departmentId": "dept-15-expansion",
+      "role": "App-specific Optimization"
+    },
+    {
+      "id": "agent-064",
+      "name": "Revenue Predictor",
+      "department": "Technical Expansion",
+      "departmentId": "dept-15-expansion",
+      "role": "AI-driven Cash Flow Forecasting"
+    },
+    {
+      "id": "agent-065",
+      "name": "Community Manager",
+      "department": "Technical Expansion",
+      "departmentId": "dept-15-expansion",
+      "role": "Telegram/Discord Engagement"
+    },
+    {
+      "id": "agent-066",
+      "name": "Feedback Loop Agent",
+      "department": "Technical Expansion",
+      "departmentId": "dept-15-expansion",
+      "role": "Customer-to-Product Bridging"
+    },
+    {
+      "id": "agent-067",
+      "name": "Archive Agent",
+      "department": "Technical Expansion",
+      "departmentId": "dept-15-expansion",
+      "role": "Cold Storage & History Maintenance"
+    },
+    {
+      "id": "agent-068",
+      "name": "Alex 2.0 (Mirror)",
+      "department": "Technical Expansion",
+      "departmentId": "dept-15-expansion",
+      "role": "Self-reflection/Mirroring Update"
+    }
+  ],
+  "departmentSummary": [
+    {
+      "id": "dept-01",
+      "name": "Central Command & Governance",
+      "agentCount": 5,
+      "description": "Strategic coordination, ethical oversight, knowledge management"
+    },
+    {
+      "id": "dept-02",
+      "name": "Healing & Somatic Operations",
+      "agentCount": 4,
+      "description": "Wellness protocols, cultural adaptation, trauma processing"
+    },
+    {
+      "id": "dept-03",
+      "name": "Creative & Aesthetic",
+      "agentCount": 3,
+      "description": "Multi-modal content creation (text, image, audio)"
+    },
+    {
+      "id": "dept-04",
+      "name": "Messaging & Voice",
+      "agentCount": 3,
+      "description": "Omnichannel communication, brand voice alignment"
+    },
+    {
+      "id": "dept-05",
+      "name": "Sales & Revenue",
+      "agentCount": 8,
+      "description": "Revenue generation, client relationships, offer optimization"
+    },
+    {
+      "id": "dept-06",
+      "name": "Strategy & Market Intelligence",
+      "agentCount": 3,
+      "description": "Competitive analysis, ecosystem mapping, performance monitoring"
+    },
+    {
+      "id": "dept-07",
+      "name": "Financial Operations",
+      "agentCount": 3,
+      "description": "P&L oversight, pricing strategy, passive income tracking"
+    },
+    {
+      "id": "dept-08",
+      "name": "Spiritual Operations",
+      "agentCount": 4,
+      "description": "Synchronicity interpretation, ritual design, intuitive guidance"
+    },
+    {
+      "id": "dept-09",
+      "name": "Automation & Integration",
+      "agentCount": 3,
+      "description": "Tool synchronization, workflow orchestration, API management"
+    },
+    {
+      "id": "dept-10",
+      "name": "Content & SEO",
+      "agentCount": 3,
+      "description": "Long-form content, search optimization, metadata generation"
+    },
+    {
+      "id": "dept-11",
+      "name": "Product Design & UX",
+      "agentCount": 3,
+      "description": "Feature architecture, data visualization, user journey mapping"
+    },
+    {
+      "id": "dept-12",
+      "name": "Legal, Ethics & Governance",
+      "agentCount": 4,
+      "description": "Compliance, contract drafting, provenance logging"
+    },
+    {
+      "id": "dept-13",
+      "name": "Web & Outreach",
+      "agentCount": 3,
+      "description": "Web scraping, partnership outreach, technical SEO"
+    },
+    {
+      "id": "dept-14-threads",
+      "name": "Specialized Threads",
+      "agentCount": 5,
+      "description": "Deep insight threads for transformation domains"
+    },
+    {
+      "id": "dept-15-expansion",
+      "name": "Technical Expansion",
+      "agentCount": 14,
+      "description": "2026 context and technical coherence layer"
+    }
+  ]
+}
