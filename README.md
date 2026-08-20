@@ -24,7 +24,8 @@ Open `http://127.0.0.1:4173/en` or `/lo`.
 ## Content maintenance
 
 - Public plan facts: update both locale pages and `tests/site.test.mjs` from the application tier source.
-- Product counts: verify against the application configuration before changing.
+- Agent roster: update `data/agents-registry.json` from the public registry, then run `npm run roster`. Do not invent names, departments, or roles.
+- Product counts: verify against the application configuration before changing. The sold Agency/Enterprise seat count is 64; the public registry currently names 68 interfaces.
 - Workflows: describe current execution as simulated and approval-gated until independently verified otherwise.
 - Providers: never name a provider as active without current production evidence.
 - Lao: keep the beta notice until a fluent human has reviewed and approved the entire locale.
